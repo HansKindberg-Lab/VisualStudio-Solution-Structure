@@ -10,4 +10,5 @@ testresults/
 *.suo
 *.user
 
+!.Global/Signing/ReadMe.txt
 !.Global/Signing/StrongName.Development.snk

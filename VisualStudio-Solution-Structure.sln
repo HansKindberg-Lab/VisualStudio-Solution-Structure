@@ -42,6 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Signing", "Signing", "{F56E39F5-5328-4443-B683-CE96C32208F7}"
 	ProjectSection(SolutionItems) = preProject
+		.Global\Signing\ReadMe.txt = .Global\Signing\ReadMe.txt
 		.Global\Signing\StrongName.Development.snk = .Global\Signing\StrongName.Development.snk
 		.Global\Signing\StrongName.snk = .Global\Signing\StrongName.snk
 	EndProjectSection
