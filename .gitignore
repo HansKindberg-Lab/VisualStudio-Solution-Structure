@@ -1,5 +1,5 @@
 _ReSharper*/
-.Signing/*
+.Global/Signing/*
 .vs*/
 bin/
 debug/
@@ -10,4 +10,4 @@ testresults/
 *.suo
 *.user
 
-!.Signing/StrongName.Development.snk
+!.Global/Signing/StrongName.Development.snk

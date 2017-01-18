@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Condition="Exists('Build\Build.props')" Project="Build\Build.props" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>HansKindberg</AssemblyName>
-    <AssemblyOriginatorKeyFile>$(SolutionDir).Signing\StrongName.snk</AssemblyOriginatorKeyFile>
-    <CodeAnalysisRuleSet>$(SolutionDir).CodeAnalysis\Solution.ruleset</CodeAnalysisRuleSet>
+    <AssemblyOriginatorKeyFile>$(SolutionDir).Global\Signing\StrongName.snk</AssemblyOriginatorKeyFile>
+    <CodeAnalysisRuleSet>$(SolutionDir).Global\CodeAnalysis\Solution.ruleset</CodeAnalysisRuleSet>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <FileAlignment>512</FileAlignment>
     <OutputType>Library</OutputType>
@@ -43,17 +43,17 @@
     <None Include="Build\Build.targets" />
     <CodeAnalysisDictionary Include="CodeAnalysis\AssemblyDictionary.xml" />
     <Compile Include="CodeAnalysis\AssemblySuppressions.cs" />
-    <CodeAnalysisDictionary Include="$(SolutionDir).CodeAnalysis\SolutionDictionary.xml">
+    <CodeAnalysisDictionary Include="$(SolutionDir).Global\CodeAnalysis\SolutionDictionary.xml">
       <Link>CodeAnalysis\SolutionDictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Compile Include="$(SolutionDir).CodeAnalysis\SolutionSuppressions.cs">
+    <Compile Include="$(SolutionDir).Global\CodeAnalysis\SolutionSuppressions.cs">
       <Link>CodeAnalysis\SolutionSuppressions.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="$(SolutionDir).Properties\Solution-Basic-AssemblyInfo.cs">
+    <Compile Include="$(SolutionDir).Global\Properties\Solution-Basic-AssemblyInfo.cs">
       <Link>Properties\Solution-Basic-AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="$(SolutionDir).Properties\Solution-Version-AssemblyInfo.cs">
+    <Compile Include="$(SolutionDir).Global\Properties\Solution-Version-AssemblyInfo.cs">
       <Link>Properties\Solution-Version-AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Foo.cs" />

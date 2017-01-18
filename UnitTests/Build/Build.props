@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Condition="Exists('..\..\.Build\Build.props')" Project="..\..\.Build\Build.props" />
+	<Import Condition="Exists('$(SolutionDir).Global\Build\Build.props')" Project="$(SolutionDir).Global\Build\Build.props" />
 </Project>
