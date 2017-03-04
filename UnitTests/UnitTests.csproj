@@ -15,7 +15,6 @@
 		<ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
 		<ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
 		<RootNamespace>HansKindberg.UnitTests</RootNamespace>
-		<RunCodeAnalysis>true</RunCodeAnalysis>
 		<SignAssembly>true</SignAssembly>
 		<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
 		<TestProjectType>UnitTest</TestProjectType>
@@ -29,6 +28,7 @@
 		<ErrorReport>prompt</ErrorReport>
 		<Optimize>false</Optimize>
 		<OutputPath>bin\Debug\</OutputPath>
+		<RunCodeAnalysis>$(RunCodeAnalysisOnDebug)</RunCodeAnalysis>
 		<WarningLevel>4</WarningLevel>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,6 +37,7 @@
 		<ErrorReport>prompt</ErrorReport>
 		<Optimize>true</Optimize>
 		<OutputPath>bin\Release\</OutputPath>
+		<RunCodeAnalysis>$(RunCodeAnalysisOnRelease)</RunCodeAnalysis>
 		<WarningLevel>4</WarningLevel>
 	</PropertyGroup>
 	<ItemGroup>
