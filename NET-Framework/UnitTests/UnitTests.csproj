@@ -1,0 +1,33 @@
+﻿<Project>
+	<Import Project="Build\Build.props" />
+	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+	<PropertyGroup>
+		<AssemblyName>HansKindberg.UnitTests</AssemblyName>
+		<AssemblyOriginatorKeyFile>$(SolutionDir)$(GlobalSigningDirectoryRelativePath)$(DevelopmentStrongNameKeyFileName)</AssemblyOriginatorKeyFile>
+		<AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
+		<Authors>$(Author)</Authors>
+		<Company>$(Author)</Company>
+		<DelaySign>false</DelaySign>
+		<FileVersion>$(AssemblyVersion)</FileVersion>
+		<RootNamespace>HansKindberg.UnitTests</RootNamespace>
+		<SignAssembly>true</SignAssembly>
+		<TargetFramework>net461</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+		<PackageReference Include="MSTest.TestAdapter" Version="1.1.17" />
+		<PackageReference Include="MSTest.TestFramework" Version="1.1.17" />
+		<!--
+		<PackageReference Include="xunit" Version="2.2.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+		-->
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Project\Project.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+	</ItemGroup>
+	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+	<Import Project="Build\Build.targets" />
+</Project>
