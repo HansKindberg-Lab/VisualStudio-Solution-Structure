@@ -2,7 +2,7 @@
 	<Import Project="Build\Build.props" />
 	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 	<PropertyGroup>
-		<AssemblyName>HansKindberg</AssemblyName>
+		<AssemblyName>NetFramework.HansKindberg</AssemblyName>
 		<AssemblyOriginatorKeyFile>$(SolutionDir)$(GlobalSigningDirectoryRelativePath)StrongName.snk</AssemblyOriginatorKeyFile>
 		<AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
 		<Authors>$(Author)</Authors>
@@ -11,7 +11,7 @@
 		<DelaySign>false</DelaySign>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<RootNamespace>HansKindberg</RootNamespace>
+		<RootNamespace>NetFramework.HansKindberg</RootNamespace>
 		<SignAssembly>true</SignAssembly>
 		<TargetFramework>net461</TargetFramework>
 		<Version>$(VersionPrefix)-alpha</Version>

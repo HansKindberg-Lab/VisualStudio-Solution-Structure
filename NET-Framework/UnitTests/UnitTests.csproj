@@ -2,7 +2,7 @@
 	<Import Project="Build\Build.props" />
 	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 	<PropertyGroup>
-		<AssemblyName>HansKindberg.UnitTests</AssemblyName>
+		<AssemblyName>NetFramework.HansKindberg.UnitTests</AssemblyName>
 		<AssemblyOriginatorKeyFile>$(SolutionDir)$(GlobalSigningDirectoryRelativePath)$(DevelopmentStrongNameKeyFileName)</AssemblyOriginatorKeyFile>
 		<AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
 		<Authors>$(Author)</Authors>
@@ -10,7 +10,7 @@
 		<Company>$(Author)</Company>
 		<DelaySign>false</DelaySign>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
-		<RootNamespace>HansKindberg.UnitTests</RootNamespace>
+		<RootNamespace>NetFramework.HansKindberg.UnitTests</RootNamespace>
 		<SignAssembly>true</SignAssembly>
 		<TargetFramework>net461</TargetFramework>
 	</PropertyGroup>
