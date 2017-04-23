@@ -6,6 +6,7 @@
 		<AssemblyOriginatorKeyFile>$(SolutionDir)$(GlobalSigningDirectoryRelativePath)StrongName.snk</AssemblyOriginatorKeyFile>
 		<AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
 		<Authors>$(Author)</Authors>
+		<CodeAnalysisRuleSet>$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)Solution.ruleset</CodeAnalysisRuleSet>
 		<Company>$(Author)</Company>
 		<DelaySign>false</DelaySign>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
@@ -15,6 +16,23 @@
 		<TargetFramework>netcoreapp1.1</TargetFramework>
 		<Version>$(VersionPrefix)-alpha</Version>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>Full</DebugType>
+		<RunCodeAnalysis>$(RunCodeAnalysisOnDebug)</RunCodeAnalysis>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<RunCodeAnalysis>$(RunCodeAnalysisOnRelease)</RunCodeAnalysis>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="CodeAnalysis\AssemblyDictionary.xml" />
+		<AdditionalFiles Include="CodeAnalysis\AssemblyDictionary.xml" />
+		<AdditionalFiles Include="$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)SolutionDictionary.xml">
+			<Link>CodeAnalysis\SolutionDictionary.xml</Link>
+		</AdditionalFiles>
+		<Compile Include="$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)SolutionSuppressions.cs">
+			<Link>CodeAnalysis\SolutionSuppressions.cs</Link>
+		</Compile>
+	</ItemGroup>
 	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 	<Import Project="Build\Build.targets" />
 </Project>

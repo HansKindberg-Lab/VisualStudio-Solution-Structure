@@ -6,8 +6,8 @@
 		<GlobalDirectoryRelativePath>.Global\</GlobalDirectoryRelativePath>
 		<MessageImportance Condition="$(MessageImportance) == ''">High</MessageImportance><!-- High, Low or Normal -->
 		<NuGetVerbosity Condition="$(NuGetVerbosity) == ''">Normal</NuGetVerbosity><!-- Normal, Quiet or Detailed -->
-		<RunCodeAnalysisOnDebug>true</RunCodeAnalysisOnDebug>
-		<RunCodeAnalysisOnRelease>true</RunCodeAnalysisOnRelease>
+		<RunCodeAnalysisOnDebug>false</RunCodeAnalysisOnDebug>
+		<RunCodeAnalysisOnRelease>false</RunCodeAnalysisOnRelease>
 		<VersionPrefix>1.0.0</VersionPrefix>
 	</PropertyGroup>
 	<PropertyGroup>

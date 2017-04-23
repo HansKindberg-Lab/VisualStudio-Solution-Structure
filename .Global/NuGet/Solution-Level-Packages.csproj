@@ -8,12 +8,21 @@
 	</ItemGroup>
 	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 	<Target Name="Build">
-		<Message Importance="high" Text="Target: Build" />
+		<ItemGroup>
+			<NuGetPackageFolder Include="$(NuGetPackageRoot)*" />
+		</ItemGroup>
+		<Message Importance="high" Text="Target - Build: %(NuGetPackageFolder.Identity)" />
 	</Target>
 	<Target Name="Clean">
-		<Message Importance="high" Text="Target: Clean" />
+		<ItemGroup>
+			<NuGetPackageFolder Include="$(NuGetPackageRoot)*" />
+		</ItemGroup>
+		<Message Importance="high" Text="Target - Clean: %(NuGetPackageFolder.Identity)" />
 	</Target>
 	<Target Name="Rebuild">
-		<Message Importance="high" Text="Target: Rebuild" />
+		<ItemGroup>
+			<NuGetPackageFolder Include="$(NuGetPackageRoot)*" />
+		</ItemGroup>
+		<Message Importance="high" Text="Target - Rebuild: %(NuGetPackageFolder.Identity)" />
 	</Target>
 </Project>

@@ -6,12 +6,20 @@
 		<AssemblyOriginatorKeyFile>$(SolutionDir)$(GlobalSigningDirectoryRelativePath)$(DevelopmentStrongNameKeyFileName)</AssemblyOriginatorKeyFile>
 		<AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
 		<Authors>$(Author)</Authors>
+		<CodeAnalysisRuleSet>$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)Solution.Tests.ruleset</CodeAnalysisRuleSet>
 		<Company>$(Author)</Company>
 		<DelaySign>false</DelaySign>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
 		<RootNamespace>HansKindberg.UnitTests</RootNamespace>
 		<SignAssembly>true</SignAssembly>
 		<TargetFramework>net461</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>Full</DebugType>
+		<RunCodeAnalysis>$(RunCodeAnalysisOnDebug)</RunCodeAnalysis>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<RunCodeAnalysis>$(RunCodeAnalysisOnRelease)</RunCodeAnalysis>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
@@ -26,7 +34,17 @@
 		<ProjectReference Include="..\Project\Project.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+		<Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="CodeAnalysis\AssemblyDictionary.xml" />
+		<AdditionalFiles Include="CodeAnalysis\AssemblyDictionary.xml" />
+		<AdditionalFiles Include="$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)SolutionDictionary.xml">
+			<Link>CodeAnalysis\SolutionDictionary.xml</Link>
+		</AdditionalFiles>
+		<Compile Include="$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)SolutionSuppressions.cs">
+			<Link>CodeAnalysis\SolutionSuppressions.cs</Link>
+		</Compile>
 	</ItemGroup>
 	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 	<Import Project="Build\Build.targets" />
