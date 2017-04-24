@@ -1,0 +1,9 @@
+﻿<Project>
+	<Import Project="Build\Build.props" />
+	<PropertyGroup>
+		<AssemblyName>HansKindberg.NetCore</AssemblyName>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<TargetFramework>netcoreapp1.1</TargetFramework>
+	</PropertyGroup>
+	<Import Project="Build\Build.targets" />
+</Project>

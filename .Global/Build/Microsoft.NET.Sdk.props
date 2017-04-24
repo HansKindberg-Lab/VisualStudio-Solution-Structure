@@ -1,0 +1,31 @@
+<Project>
+	<Import Project="Build.props" />
+	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+	<PropertyGroup>
+		<AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
+		<Authors>$(Author)</Authors>
+		<Company>$(Author)</Company>
+		<DelaySign>false</DelaySign>
+		<FileVersion>$(AssemblyVersion)</FileVersion>
+		<SignAssembly>true</SignAssembly>
+		<Version>$(VersionPrefix)-alpha</Version>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>full</DebugType>
+		<RunCodeAnalysis>$(RunCodeAnalysisOnDebug)</RunCodeAnalysis>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>pdbonly</DebugType>
+		<RunCodeAnalysis>$(RunCodeAnalysisOnRelease)</RunCodeAnalysis>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="CodeAnalysis\AssemblyDictionary.xml" />
+		<AdditionalFiles Include="CodeAnalysis\AssemblyDictionary.xml" />
+		<AdditionalFiles Include="$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)SolutionDictionary.xml">
+			<Link>CodeAnalysis\SolutionDictionary.xml</Link>
+		</AdditionalFiles>
+		<Compile Include="$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)SolutionSuppressions.cs">
+			<Link>CodeAnalysis\SolutionSuppressions.cs</Link>
+		</Compile>
+	</ItemGroup>
+</Project>

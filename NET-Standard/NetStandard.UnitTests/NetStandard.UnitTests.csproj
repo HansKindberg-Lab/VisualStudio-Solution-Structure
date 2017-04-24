@@ -1,0 +1,12 @@
+﻿<Project>
+	<Import Project="Build\Build.props" />
+	<PropertyGroup>
+		<AssemblyName>HansKindberg.NetStandard.UnitTests</AssemblyName>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<TargetFramework>netstandard1.6</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\NetStandard\NetStandard.csproj" />
+	</ItemGroup>
+	<Import Project="Build\Build.targets" />
+</Project>

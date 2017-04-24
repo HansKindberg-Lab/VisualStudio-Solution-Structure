@@ -1,0 +1,3 @@
+<Project>
+	<Import Condition="Exists('$(SolutionDir).Global\Build\Test-Project.props')" Project="$(SolutionDir).Global\Build\Test-Project.props" />
+</Project>

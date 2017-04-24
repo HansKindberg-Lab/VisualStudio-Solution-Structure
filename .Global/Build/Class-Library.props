@@ -1,0 +1,8 @@
+<Project>
+	<Import Project="Microsoft.NET.Sdk.props" />
+	<PropertyGroup>
+		<AssemblyOriginatorKeyFile>$(SolutionDir)$(GlobalSigningDirectoryRelativePath)StrongName.snk</AssemblyOriginatorKeyFile>
+		<CodeAnalysisRuleSet>$(SolutionDir)$(GlobalCodeAnalysisDirectoryRelativePath)Solution.ruleset</CodeAnalysisRuleSet>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,15 @@
+﻿<Project>
+	<Import Project="Build\Build.props" />
+	<PropertyGroup>
+		<AssemblyName>HansKindberg.NetFramework.UnitTests</AssemblyName>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<TargetFramework>net461</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\NetFramework\NetFramework.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+	</ItemGroup>
+	<Import Project="Build\Build.targets" />
+</Project>

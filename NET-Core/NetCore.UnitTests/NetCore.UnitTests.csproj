@@ -1,0 +1,12 @@
+﻿<Project>
+	<Import Project="Build\Build.props" />
+	<PropertyGroup>
+		<AssemblyName>HansKindberg.NetCore.UnitTests</AssemblyName>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<TargetFramework>netcoreapp1.1</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\NetCore\NetCore.csproj" />
+	</ItemGroup>
+	<Import Project="Build\Build.targets" />
+</Project>
