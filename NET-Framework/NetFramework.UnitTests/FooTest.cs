@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace NetFramework.HansKindberg.UnitTests
+namespace HansKindberg.NetFramework.UnitTests
 {
 	[TestClass]
 	public class FooTest

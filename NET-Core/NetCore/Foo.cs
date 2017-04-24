@@ -1,6 +1,6 @@
 using System;
 
-namespace NetCore.HansKindberg
+namespace HansKindberg.NetCore
 {
 	public class Foo : IDisposable
 	{

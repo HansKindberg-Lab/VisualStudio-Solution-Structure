@@ -1,6 +1,6 @@
 using System;
 
-namespace NetFramework.HansKindberg
+namespace HansKindberg.NetFramework
 {
 	public class Foo : IDisposable
 	{
